@@ -119,8 +119,7 @@ public:
     }
 
     float dist(vec2D v) const {
-        vec2D d(v.x - x, v.y - y);
-        return d.length();
+        return std::sqrt((x-v.x)*(x-v.x)+(y-v.y)*(y-v.y));
     }
 
     float distManhattan(vec2D v) const {
@@ -151,6 +150,14 @@ public:
 
     static float cross(vec2D v1, vec2D v2) {
         return (v1.x * v2.y) - (v1.y * v2.x);
+    }
+
+    static float dist(vec2D a, vec2D b) {
+        return a.dist(b);
+    }
+
+    static float distManhattan(vec2D a, vec2D b) {
+        return a.distManhattan(b);
     }
 
     friend std::ostream& operator<< (std::ostream& stream, const vec2D v) {
