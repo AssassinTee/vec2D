@@ -36,6 +36,7 @@ public:
 	vec2D operator+(vec2D& v) {
 		return vec2D(x + v.x, y + v.y);
 	}
+
 	vec2D operator-(vec2D& v) {
 		return vec2D(x - v.x, y - v.y);
 	}
@@ -45,6 +46,7 @@ public:
 		y += v.y;
 		return *this;
 	}
+
 	vec2D& operator-=(vec2D& v) {
 		x -= v.x;
 		y -= v.y;
@@ -54,32 +56,37 @@ public:
 	vec2D operator+(double s) {
 		return vec2D(x + s, y + s);
 	}
+
 	vec2D operator-(double s) {
 		return vec2D(x - s, y - s);
 	}
+
 	vec2D operator*(double s) {
 		return vec2D(x * s, y * s);
 	}
+
 	vec2D operator/(double s) {
 		return vec2D(x / s, y / s);
 	}
-
 
 	vec2D& operator+=(double s) {
 		x += s;
 		y += s;
 		return *this;
 	}
+
 	vec2D& operator-=(double s) {
 		x -= s;
 		y -= s;
 		return *this;
 	}
+
 	vec2D& operator*=(double s) {
 		x *= s;
 		y *= s;
 		return *this;
 	}
+
 	vec2D& operator/=(double s) {
 		x /= s;
 		y /= s;
@@ -122,6 +129,7 @@ public:
 	float length() const {
 		return std::sqrt(x * x + y * y);
 	}
+
 	void truncate(double length) {
 		double angle = atan2f(y, x);
 		x = length * cos(angle);
@@ -132,14 +140,14 @@ public:
 		return vec2(y, -x);
 	}
 
-	unsigned long long getHash()
-	{
+	unsigned long long getHash() {
 	    return hash.to_ullong();
 	}
 
 	static float dot(vec2D v1, vec2D v2) {
 		return v1.x * v2.x + v1.y * v2.y;
 	}
+
 	static float cross(vec2D v1, vec2D v2) {
 		return (v1.x * v2.y) - (v1.y * v2.x);
 	}
