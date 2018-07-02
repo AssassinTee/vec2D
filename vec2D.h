@@ -148,7 +148,18 @@ public:
         stream << "vec2D("<<(float)v.x<<"/"<<(float)v.y<<")";
         return stream;
     }
+
+    static const vec2D<T> ZERO;
+    static const vec2D<T> UP;
+    static const vec2D<T> RIGHT;
+    static const vec2D<T> DOWN;
+    static const vec2D<T> LEFT;
 };
+
+template <typename T> const vec2D<T> vec2D<T>::UP(0, -1);
+template <typename T> const vec2D<T> vec2D<T>::RIGHT(1, 0);
+template <typename T> const vec2D<T> vec2D<T>::DOWN(0, 1);
+template <typename T> const vec2D<T> vec2D<T>::LEFT(-1, 0);
 
 typedef vec2D<int8_t> vec2;
 typedef vec2D<float> vec2f;
