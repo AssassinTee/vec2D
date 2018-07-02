@@ -22,10 +22,10 @@ public:
         std::bitset<2*sizeof(T)*CHAR_BIT> hash;
     };
 
-	vec2D() :x(0), y(0) {}
-	vec2D(T z) : x(z), y(z) {}
-	vec2D(T x, T y) : x(x), y(y) {}
-	vec2D(const vec2D& v) : x(v.x), y(v.y) {}
+    vec2D() :x(0), y(0) {}
+    vec2D(T z) : x(z), y(z) {}
+    vec2D(T x, T y) : x(x), y(y) {}
+    vec2D(const vec2D& v) : x(v.x), y(v.y) {}
 
 	vec2D& operator=(const vec2D& v) {
 		x = v.x;
@@ -127,11 +127,11 @@ public:
 	}
 
 	float length() const {
-		return std::sqrt(x * x + y * y);
+	    return std::sqrt(x * x + y * y);
 	}
 
 	void truncate(double length) {
-		double angle = atan2f(y, x);
+	    double angle = atan2f(y, x);
 		x = length * cos(angle);
 		y = length * sin(angle);
 	}
