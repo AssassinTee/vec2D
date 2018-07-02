@@ -21,5 +21,10 @@ int main(int argc, char* stuff[])
     std::cout << vec2::LEFT << std::endl;
     std::cout << vec2f::LEFT << std::endl;
     std::cout << vec2D<double>::LEFT << std::endl;
+    std::cout << dist(vec2::LEFT, vec2::RIGHT) << std::endl;
+    vec2f s2(std::sqrt(2));
+    std::cout << s2 << std::endl;
+    s2*=s2.x;
+    std::cout << s2 << std::endl;
     return 0;
 }
