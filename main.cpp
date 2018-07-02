@@ -18,5 +18,8 @@ int main(int argc, char* stuff[])
     std::cout << "manhattan: " << two.distManhattan(null) << std::endl;
     two.x+=1;
     std::cout << "manhattan: " << two.distManhattan(null) << std::endl;
+    std::cout << vec2::LEFT << std::endl;
+    std::cout << vec2f::LEFT << std::endl;
+    std::cout << vec2D<double>::LEFT << std::endl;
     return 0;
 }
