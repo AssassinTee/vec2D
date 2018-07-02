@@ -156,6 +156,7 @@ public:
     static const vec2D<T> LEFT;
 };
 
+template <typename T> const vec2D<T> vec2D<T>::ZERO(0, 0);
 template <typename T> const vec2D<T> vec2D<T>::UP(0, -1);
 template <typename T> const vec2D<T> vec2D<T>::RIGHT(1, 0);
 template <typename T> const vec2D<T> vec2D<T>::DOWN(0, 1);
